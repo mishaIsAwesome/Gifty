@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register_bg"
+    tools:context=".Register">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/big_full_screen_padding"
+        android:divider="@drawable/layout_divider_ver_small"
+        android:showDividers="middle"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/josefin_sans"
+            android:textSize="@dimen/font_title"
+            android:text="@string/register_title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:fontFamily="@font/josefin_sans"
+            android:textSize="@dimen/font_medium"
+            android:textColor="@color/color_text_light"
+            android:text="@string/name_label"/>
+
+        <EditText
+            android:id="@+id/name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_medium"
+            android:inputType="textEmailAddress"
+            android:fontFamily="@font/josefin_sans"
+            android:textColor="@color/color_text"
+            android:backgroundTint="@color/color_text_light"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:fontFamily="@font/josefin_sans"
+            android:textSize="@dimen/font_medium"
+            android:textColor="@color/color_text_light"
+            android:text="@string/email_label"/>
+
+        <EditText
+            android:id="@+id/email_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_medium"
+            android:inputType="text"
+            android:fontFamily="@font/josefin_sans"
+            android:textColor="@color/color_text"
+            android:backgroundTint="@color/color_text_light"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:fontFamily="@font/josefin_sans"
+            android:textSize="@dimen/font_medium"
+            android:textColor="@color/color_text_light"
+            android:text="@string/password_label"/>
+
+        <EditText
+            android:id="@+id/password_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_medium"
+            android:inputType="textPassword"
+            android:fontFamily="@font/josefin_sans"
+            android:textColor="@color/color_text"
+            android:backgroundTint="@color/color_text_light"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:fontFamily="@font/josefin_sans"
+            android:textSize="@dimen/font_medium"
+            android:textColor="@color/color_text_light"
+            android:text="@string/retype_password_label"/>
+
+        <EditText
+            android:id="@+id/retype_password__edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_medium"
+            android:inputType="textPassword"
+            android:fontFamily="@font/josefin_sans"
+            android:textColor="@color/color_text"
+            android:backgroundTint="@color/color_text_light"/>
+
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/element_spacing_medium"
+            android:textAllCaps="false"
+            android:fontFamily="@font/josefin_sans"
+            android:textColor="@color/color_text"
+            android:text="@string/register_title"
+            android:background="@drawable/ripple_button_long"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/element_spacing_small"
+                android:fontFamily="@font/josefin_slab"
+                android:text="@string/already_have_account_text"/>
+
+            <TextView
+                android:id="@+id/login_text_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_slab_bold"
+                android:text="@string/sign_in_here_text"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="@dimen/element_spacing_medium"
+            android:background="@color/color_text_light"
+            />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/loading_bar"
+        android:layout_width="@dimen/icon_medium"
+        android:layout_height="@dimen/icon_medium"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"/>
+</RelativeLayout>

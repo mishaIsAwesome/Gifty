@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/element_spacing_big"
+    android:padding="@dimen/element_spacing_small"
+    android:orientation="horizontal">
+    <ImageView
+        android:id="@+id/friend_image"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/friend_image"
+        android:layout_centerVertical="true"
+        android:layout_marginHorizontal="@dimen/element_spacing_medium"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/occasion_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:textSize="@dimen/font_medium"
+            android:text="Femi's Birthday"/>
+        <TextView
+            android:id="@+id/date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/josefin_sans"
+            android:textSize="@dimen/font_small"
+            android:text="25/6/2020"/>
+        <TextView
+            android:id="@+id/days_away_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/josefin_sans"
+            android:textSize="@dimen/font_small"
+            android:text="0 days away"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:showDividers="middle"
+        android:divider="@drawable/layout_divider_hor_small"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="@dimen/icon_medium"
+            android:layout_height="@dimen/icon_medium"
+            android:src="@drawable/ic_cart"/>
+
+        <TextView
+            android:id="@+id/cart_items_count_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="0"
+            android:textSize="@dimen/font_medium" />
+    </LinearLayout>
+</RelativeLayout>

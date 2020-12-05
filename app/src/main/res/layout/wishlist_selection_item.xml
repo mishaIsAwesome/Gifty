@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/element_spacing_big"
+    android:padding="@dimen/element_spacing_small">
+
+    <CheckBox
+        android:id="@+id/select_wishlist_checkbox"
+        android:layout_width="@dimen/icon_small"
+        android:layout_height="@dimen/icon_small"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:buttonTint="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/wishlist_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@+id/select_wishlist_checkbox"
+        android:layout_marginHorizontal="@dimen/element_spacing_small"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:textSize="@dimen/font_medium"
+        android:text="Femi's Birthday"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="@dimen/icon_medium"
+            android:layout_height="@dimen/icon_medium"
+            android:layout_marginHorizontal="@dimen/element_spacing_small"
+            android:src="@drawable/ic_cart"/>
+
+        <TextView
+            android:id="@+id/cart_items_count_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="0"
+            android:textSize="@dimen/font_medium" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/element_spacing_small"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_rect_dashed">
+
+    <TextView
+        android:id="@+id/order_occasion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/element_spacing_super_small"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:fontFamily="@font/abril_fatface"
+        android:textSize="@dimen/font_big"
+        android:text="Femi's Birthday"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/order_item_layout"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="8dp">
+            <ImageView
+                android:id="@+id/order_item_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_gray"/>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/element_spacing_small"
+            android:layout_toRightOf="@+id/order_item_layout"
+            android:layout_centerInParent="true"
+            android:showDividers="middle"
+            android:divider="@drawable/layout_divider_ver_super_small"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/order_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bree_serif"
+                android:textSize="@dimen/font_small"
+                android:text="Order Number: "/>
+            <TextView
+                android:id="@+id/order_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bree_serif"
+                android:textSize="@dimen/font_small"
+                android:text="Order Date: "/>
+            <TextView
+                android:id="@+id/order_total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bree_serif"
+                android:textSize="@dimen/font_small"
+                android:text="Total: "/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/element_spacing_super_small"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/bree_serif"
+            android:textSize="@dimen/font_small"
+            android:text="Delivered"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:background="@drawable/ripple_cat_button" />
+    </RelativeLayout>
+
+</LinearLayout>

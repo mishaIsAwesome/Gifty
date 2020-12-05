@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Payment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/default_full_screen_padding"
+        android:layout_above="@+id/button_layout"
+        android:showDividers="middle"
+        android:divider="@drawable/layout_divider_ver_small"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/title_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="@dimen/icon_medium"
+                android:layout_height="@dimen/icon_medium"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/ripple_back_button"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_title"
+                android:fontFamily="@font/abril_fatface"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:layout_centerInParent="true"
+                android:text="@string/payment_title"
+                />
+        </RelativeLayout>
+
+    <!--    Delivery Address-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_sans_bold"
+                android:textSize="@dimen/font_medium"
+                android:text="@string/delivery_address_label"/>
+            <ImageView
+                android:layout_width="@dimen/icon_small"
+                android:layout_height="@dimen/icon_small"
+                android:layout_marginHorizontal="@dimen/element_spacing_small"
+                android:src="@drawable/ic_location"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/element_spacing_small"
+            android:orientation="vertical"
+            android:background="@drawable/bordered_rect">
+            <TextView
+                android:id="@+id/payment_recipient_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/element_spacing_super_small"
+                android:fontFamily="@font/josefin_sans"
+                android:textSize="@dimen/font_medium"/>
+            <TextView
+                android:id="@+id/payment_recipient_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_slab"
+                android:textSize="@dimen/font_small"/>
+        </LinearLayout>
+
+    <!--    Payment Methods-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_sans_bold"
+                android:textSize="@dimen/font_medium"
+                android:text="@string/payment_method_label"/>
+            <ImageView
+                android:layout_width="@dimen/icon_small"
+                android:layout_height="@dimen/icon_small"
+                android:layout_marginHorizontal="@dimen/element_spacing_small"
+                android:src="@drawable/ic_wallet"/>
+        </LinearLayout>
+
+        <ExpandableListView
+            android:id="@+id/payment_method_expandable_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/layout_divider_ver_small"
+            android:childDivider="@android:color/transparent"
+            android:groupIndicator="@null"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/element_spacing_small"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+        <Button
+            android:id="@+id/pay_now_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="@string/proceed_button_label"
+            android:enabled="false"
+            android:background="@drawable/ripple_button_long_light" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cart">
+
+    <RelativeLayout
+        android:id="@+id/title_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_full_screen_padding"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="@dimen/icon_medium"
+            android:layout_height="@dimen/icon_medium"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/ripple_back_button"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_title"
+            android:fontFamily="@font/abril_fatface"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:layout_centerInParent="true"
+            android:text="@string/cart_title"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/wishlist_selection_spinner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_container"
+        android:layout_marginHorizontal="@dimen/default_full_screen_padding">
+        <Spinner
+            android:id="@+id/wishlist_selection_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:overlapAnchor="false"
+            android:spinnerMode="dropdown"
+            android:background="@android:color/transparent"/>
+        <ImageView
+            android:layout_width="@dimen/icon_small"
+            android:layout_height="@dimen/icon_small"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_down"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/checkout_items_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_full_screen_padding"
+        android:layout_marginStart="@dimen/default_full_screen_padding"
+        android:layout_below="@id/wishlist_selection_spinner_layout"
+        android:layout_above="@+id/receipt_container"
+        android:divider="@null"
+        android:dividerHeight="0dp"/>
+
+    <LinearLayout
+        android:id="@+id/receipt_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/element_spacing_medium"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_rect_half">
+
+<!--    Subtotal-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/element_spacing_super_small"
+            android:layout_marginHorizontal="@dimen/element_spacing_big">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_sans"
+                android:textSize="@dimen/font_medium"
+                android:text="@string/subtotal_label"/>
+            <TextView
+                android:id="@+id/checkout_subtotal_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/josefin_sans"
+                android:textSize="@dimen/font_medium"
+                android:text="RM 50.00"/>
+        </RelativeLayout>
+
+<!--    Shipping Fee-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/element_spacing_super_small"
+            android:layout_marginHorizontal="@dimen/element_spacing_big">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_sans"
+                android:textSize="@dimen/font_medium"
+                android:text="@string/shipping_fees_label"/>
+            <TextView
+                android:id="@+id/checkout_shipping_fee_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/josefin_sans"
+                android:textSize="@dimen/font_medium"
+                android:text="RM 4.00"/>
+        </RelativeLayout>
+
+<!--    Total-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/element_spacing_super_small"
+            android:layout_marginHorizontal="@dimen/element_spacing_big">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_sans_bold"
+                android:textSize="@dimen/font_medium"
+                android:text="@string/total_label"/>
+            <TextView
+                android:id="@+id/checkout_total_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/josefin_sans_bold"
+                android:textSize="@dimen/font_medium"
+                android:text="RM 54.00"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/pay_now_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/element_spacing_small"
+            android:layout_marginBottom="@dimen/element_spacing_super_small"
+            android:textAllCaps="false"
+            android:text="@string/pay_now_button_label"
+            android:background="@drawable/ripple_button_long_light" />
+    </LinearLayout>
+
+
+</RelativeLayout>

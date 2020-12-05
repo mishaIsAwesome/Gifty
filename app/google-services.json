@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1054874866480",
+    "firebase_url": "https://gifty-d3d90.firebaseio.com",
+    "project_id": "gifty-d3d90",
+    "storage_bucket": "gifty-d3d90.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1054874866480:android:d17083d0f34ef05654aef5",
+        "android_client_info": {
+          "package_name": "com.inti.gifty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1054874866480-ld2d16hkp8i9ft6d40vfvbc2tg5cc2pj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.inti.gifty",
+            "certificate_hash": "e0ac063a1c8c0c547b99d1f09493ec53b3817af7"
+          }
+        },
+        {
+          "client_id": "1054874866480-jr9ask8itiimk2u98jneerbi7htj8ncq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3aPyl9IcDQ3zXuyJnB5w8VouxtWqzLY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1054874866480-jr9ask8itiimk2u98jneerbi7htj8ncq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

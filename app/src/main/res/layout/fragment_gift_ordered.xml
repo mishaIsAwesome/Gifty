@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".GiftOrdered">
+
+<!--    <ImageView-->
+<!--        android:id="@+id/gift_image"-->
+<!--        android:layout_width="@dimen/icon_big"-->
+<!--        android:layout_height="@dimen/icon_big"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:src="@drawable/ic_gift2"/>-->
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/gift_image"
+        android:layout_width="@dimen/lottie_big"
+        android:layout_height="@dimen/lottie_big"
+        android:paddingBottom="@dimen/element_spacing_big"
+        android:layout_centerInParent="true"
+        app:lottie_rawRes="@raw/gift_box"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/element_spacing_small"
+        android:layout_below="@+id/gift_image"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:textSize="@dimen/font_big"
+        android:text="@string/gift_ordered_message"/>
+
+<!--    <ImageView-->
+<!--        android:layout_width="@dimen/icon_big"-->
+<!--        android:layout_height="@dimen/icon_big"-->
+<!--        android:layout_above="@+id/gift_image"-->
+<!--        android:layout_marginLeft="130dp"-->
+<!--        android:src="@drawable/ic_balloons"/>-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="@dimen/icon_big"-->
+<!--        android:layout_height="@dimen/icon_big"-->
+<!--        android:layout_above="@+id/gift_image"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:layout_marginLeft="210dp"-->
+<!--        android:src="@drawable/ic_balloons"/>-->
+
+    <Button
+        android:id="@+id/continue_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_full_screen_padding"
+        android:layout_alignParentBottom="true"
+        android:textAllCaps="false"
+        android:text="@string/continue_text"
+        android:background="@drawable/ripple_button_long_light" />
+
+</RelativeLayout>

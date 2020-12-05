@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Wishlist">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/default_full_screen_padding"
+        android:divider="@drawable/layout_divider_ver_medium"
+        android:showDividers="middle"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/title_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/element_spacing_small"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="@dimen/icon_medium"
+                android:layout_height="@dimen/icon_medium"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/ripple_back_button"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_title"
+                android:fontFamily="@font/abril_fatface"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:layout_centerInParent="true"
+                android:text="@string/wishlist_title"
+                />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/friend_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/friend_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/josefin_sans_bold"
+                    android:textSize="@dimen/font_big"/>
+                <ImageButton
+                    android:id="@+id/edit_button"
+                    android:layout_width="@dimen/icon_super_small"
+                    android:layout_height="@dimen/icon_super_small"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/ic_edit"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/friend_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_slab"
+                android:textSize="@dimen/font_medium"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_sans_bold"
+                android:textSize="@dimen/font_medium"
+                android:text="@string/address_label"/>
+
+            <TextView
+                android:id="@+id/friend_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/element_spacing_medium"
+                android:fontFamily="@font/josefin_slab"
+                android:textSize="@dimen/font_medium"/>
+        </LinearLayout>
+
+<!--    Items-->
+        <TextView
+            android:id="@+id/items_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:textSize="@dimen/font_medium"
+            android:text="@string/items_label"/>
+
+        <com.inti.gifty.NonScrollListView
+            android:id="@+id/cart_items_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:dividerHeight="0dp"/>
+
+        <TextView
+            android:id="@+id/list_empty_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_medium"
+            android:fontFamily="@font/josefin_slab"
+            android:visibility="invisible"
+            android:text="@string/empty_wishlist_message"/>
+
+<!--    Notes-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_sans_bold"
+                android:textSize="@dimen/font_medium"
+                android:text="@string/notes_label"/>
+
+            <TextView
+                android:id="@+id/friend_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/element_spacing_small"
+                android:padding="@dimen/element_spacing_small"
+                android:lines="5"
+                android:fontFamily="@font/josefin_slab"
+                android:background="@drawable/rounded_rect"
+                android:textSize="@dimen/font_medium"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/checkout_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/element_spacing_big"
+            android:layout_marginBottom="@dimen/element_spacing_medium"
+            android:textAllCaps="false"
+            android:text="@string/checkout_button_label"
+            android:background="@drawable/ripple_button_long"
+            />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/default_full_screen_padding"
+    android:orientation="vertical"
+    tools:context=".ProfileForm">
+
+    <RelativeLayout
+        android:id="@+id/title_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/element_spacing_small"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="@dimen/icon_medium"
+            android:layout_height="@dimen/icon_medium"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/ripple_back_button"/>
+        <TextView
+            android:id="@+id/wishlist_form_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_title"
+            android:fontFamily="@font/abril_fatface"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:layout_centerInParent="true"
+            android:text="@string/card_form_title"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/element_spacing_medium"
+        android:showDividers="middle"
+        android:divider="@drawable/layout_divider_ver_small"
+        android:orientation="vertical">
+
+        <!--    Name-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:textSize="@dimen/font_medium"
+            android:textColor="@color/color_text_light"
+            android:text="@string/card_name_label"/>
+
+        <EditText
+            android:id="@+id/card_name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_medium"
+            android:inputType="text"
+            android:fontFamily="@font/josefin_sans"
+            android:textColor="@color/color_text"
+            android:backgroundTint="@color/color_text_light"/>
+
+        <!--    Card Number-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:textSize="@dimen/font_medium"
+            android:textColor="@color/color_text_light"
+            android:text="@string/card_number_label"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/card_number_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_medium"
+                android:fontFamily="@font/josefin_sans"
+                android:textColor="@color/color_text"
+                android:backgroundTint="@color/color_text_light"/>
+            <ImageView
+                android:id="@+id/card_service_image"
+                android:layout_width="@dimen/icon_small"
+                android:layout_height="@dimen/icon_small"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <!--    Expiry Date-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:textSize="@dimen/font_medium"
+            android:textColor="@color/color_text_light"
+            android:text="@string/card_expiry_label"/>
+
+        <EditText
+            android:id="@+id/card_expiry_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_medium"
+            android:inputType="date"
+            android:fontFamily="@font/josefin_sans"
+            android:textColor="@color/color_text"
+            android:backgroundTint="@color/color_text_light"/>
+
+        <!--    Expiry Date-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:textSize="@dimen/font_medium"
+            android:textColor="@color/color_text_light"
+            android:text="@string/card_cvv_label"/>
+
+        <EditText
+            android:id="@+id/card_cvv_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_medium"
+            android:inputType="number"
+            android:maxLength="3"
+            android:fontFamily="@font/josefin_sans"
+            android:textColor="@color/color_text"
+            android:backgroundTint="@color/color_text_light"/>
+    </LinearLayout>
+
+    <!--    Submit Button-->
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/element_spacing_big"
+        android:textAllCaps="false"
+        android:text="@string/add_button_label"
+        android:background="@drawable/ripple_button_long_light"
+        />
+
+</LinearLayout>

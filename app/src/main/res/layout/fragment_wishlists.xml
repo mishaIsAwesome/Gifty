@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Wishlists">
+
+    <TextView
+        android:id="@+id/wishlists_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_full_screen_padding"
+        android:layout_alignParentTop="true"
+        android:textSize="@dimen/font_title"
+        android:fontFamily="@font/abril_fatface"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        android:text="@string/wishlists_title"
+        />
+
+    <ListView
+        android:id="@+id/wishlist_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wishlists_title"
+        android:divider="@null"
+        android:dividerHeight="0dp"/>
+
+    <TextView
+        android:id="@+id/wishlists_empty_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/font_medium"
+        android:fontFamily="@font/josefin_slab"
+        android:visibility="invisible"
+        android:text="@string/empty_wishlists_message"/>
+
+
+    <ImageButton
+        android:id="@+id/add_friend_button"
+        android:layout_width="@dimen/icon_big"
+        android:layout_height="@dimen/icon_big"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/element_spacing_big"
+        android:layout_marginBottom="@dimen/element_spacing_big"
+        android:background="@drawable/ic_plus_fill"/>
+
+</RelativeLayout>

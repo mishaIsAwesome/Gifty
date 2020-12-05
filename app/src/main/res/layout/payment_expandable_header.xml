@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/element_spacing_small"
+    android:backgroundTint="@color/colorPrimarySuperLight"
+    android:background="@drawable/rounded_rect">
+    <TextView
+        android:id="@+id/payment_method_option_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/josefin_sans"
+        android:textSize="@dimen/font_medium"/>
+    <ImageView
+        android:id="@+id/expandable_arrow"
+        android:layout_width="@dimen/icon_small"
+        android:layout_height="@dimen/icon_small"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        app:tint="@color/color_text"
+        android:src="@drawable/ic_arrow_down"/>
+</RelativeLayout>

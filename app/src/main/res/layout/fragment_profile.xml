@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Profile">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="@dimen/element_spacing_medium"/>
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="@dimen/element_spacing_small"
+            android:fontFamily="@font/abril_fatface"
+            android:textSize="@dimen/font_big"
+            android:text="Jung Hoseok"/>
+
+        <TextView
+        android:id="@+id/profile_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_name"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/bree_serif"
+        android:textSize="@dimen/font_medium"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:showDividers="middle"
+        android:divider="@drawable/layout_divider_ver_super_small"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+<!--        Edit Profile-->
+        <LinearLayout
+            android:id="@+id/edit_profile_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/element_spacing_super_small"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:background="@drawable/ripple_transparent">
+            <ImageView
+                android:layout_width="@dimen/icon_small"
+                android:layout_height="@dimen/icon_small"
+                android:src="@drawable/ic_edit_outline"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/element_spacing_small"
+                android:text="@string/profile_edit_title"/>
+        </LinearLayout>
+
+<!--        Favourites-->
+        <LinearLayout
+            android:id="@+id/favourites_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/element_spacing_super_small"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:background="@drawable/ripple_transparent">
+            <ImageView
+                android:layout_width="@dimen/icon_small"
+                android:layout_height="@dimen/icon_small"
+                android:src="@drawable/ic_heart_outline"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/element_spacing_small"
+                android:text="@string/favourites_label"/>
+        </LinearLayout>
+
+<!--        My Cards-->
+        <LinearLayout
+            android:id="@+id/my_cards_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/element_spacing_super_small"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:background="@drawable/ripple_transparent">
+            <ImageView
+                android:layout_width="@dimen/icon_small"
+                android:layout_height="@dimen/icon_small"
+                android:src="@drawable/ic_cards"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/element_spacing_small"
+                android:text="@string/cards_title"/>
+        </LinearLayout>
+
+<!--        Notifications-->
+        <LinearLayout
+            android:id="@+id/notifications_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/element_spacing_super_small"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:background="@drawable/ripple_transparent">
+            <ImageView
+                android:layout_width="@dimen/icon_small"
+                android:layout_height="@dimen/icon_small"
+                android:src="@drawable/ic_bell"/>
+            <TextView
+                android:id="@+id/notifications_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/element_spacing_small"
+                android:text="@string/notifications_enabled_label"/>
+            <Switch
+                android:id="@+id/notifications_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/SwitchDark"/>
+        </LinearLayout>
+
+<!--        Logout-->
+        <LinearLayout
+            android:id="@+id/logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/element_spacing_super_small"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:background="@drawable/ripple_transparent">
+            <ImageView
+                android:layout_width="@dimen/icon_small"
+                android:layout_height="@dimen/icon_small"
+                android:layout_marginRight="@dimen/element_spacing_small"
+                android:src="@drawable/ic_logout"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/logout_label"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

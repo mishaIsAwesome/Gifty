@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimarySuperLight">#FFDBDB</color>
+    <color name="colorPrimaryLight">#FBCABB</color>
+    <color name="colorPrimary">#F9B0C3</color>
+    <color name="colorPrimaryDark">#E3ABCE</color>
+    <color name="colorPrimarySuperDark">#CEB6D9</color>
+    <color name="colorAccent">#47525E</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="light_gray">#C0CCDA</color>
+    <color name="baby_blue">#A2C8EC</color>
+
+    //Text
+    <color name="color_text">#47525E</color>
+    <color name="color_text_light">#8492A6</color>
+
+    //Button
+    <color name="colorInactiveButton">#33F9B0C3</color>
+    <color name="color60PrimaryLight">#96FBCABB</color>
+    <color name="color60Primary">#96F9B0C3</color>
+    <color name="color60PrimaryDark">#96E3ABCE</color>
+    <color name="light_gray_ripple">#80C0CCDA</color>
+
+
+</resources>

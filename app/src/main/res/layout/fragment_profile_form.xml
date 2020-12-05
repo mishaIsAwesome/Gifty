@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/default_full_screen_padding"
+    android:orientation="vertical"
+    tools:context=".ProfileForm">
+
+    <RelativeLayout
+        android:id="@+id/title_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/element_spacing_small"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="@dimen/icon_medium"
+            android:layout_height="@dimen/icon_medium"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/ripple_back_button"/>
+        <TextView
+            android:id="@+id/wishlist_form_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_title"
+            android:fontFamily="@font/abril_fatface"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:layout_centerInParent="true"
+            android:text="@string/profile_edit_title"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/edit_profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"/>
+
+           <!--    Name-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/element_spacing_medium"
+            android:layout_marginBottom="@dimen/element_spacing_big"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/josefin_sans_bold"
+                android:textSize="@dimen/font_medium"
+                android:textColor="@color/color_text_light"
+                android:text="@string/name_label"/>
+
+            <EditText
+                android:id="@+id/name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_medium"
+                android:inputType="text"
+                android:fontFamily="@font/josefin_sans"
+                android:textColor="@color/color_text"
+                android:backgroundTint="@color/color_text_light"/>
+        </LinearLayout>
+
+<!--    Add Button-->
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/element_spacing_big"
+            android:layout_marginBottom="@dimen/element_spacing_super_small"
+            android:textAllCaps="false"
+            android:text="@string/save_button_label"
+            android:background="@drawable/ripple_button_long_dark"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

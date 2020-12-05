@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".Gift">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="10"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_weight="7">
+            <Button
+                android:id="@+id/back_button"
+                android:layout_width="@dimen/icon_medium"
+                android:layout_height="@dimen/icon_medium"
+                android:layout_marginTop="@dimen/default_full_screen_padding"
+                android:layout_marginLeft="@dimen/default_full_screen_padding"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/ripple_back_button"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:translationY="-50dp"
+                app:cardCornerRadius="@dimen/rounded_edge_big"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/gift_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/flowers_white"
+                    android:translationY="50dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:translationY="-50dp"
+            android:padding="@dimen/default_full_screen_padding"
+            android:divider="@drawable/layout_divider_ver_small"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/gift_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9"
+                    android:fontFamily="@font/josefin_sans_bold"
+                    android:text="Moleskin Idea Notebook"
+                    android:textSize="@dimen/font_big" />
+                <Button
+                    android:id="@+id/heart_button"
+                    android:layout_width="@dimen/icon_small"
+                    android:layout_height="@dimen/icon_small"
+                    android:background="@drawable/heart_button"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/gift_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_sans_thin"
+                android:textSize="@dimen/font_medium"
+                android:text="RM 58.00"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:divider="@drawable/layout_divider_hor_small"
+                android:showDividers="middle"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/minus_button"
+                    android:layout_width="@dimen/icon_medium"
+                    android:layout_height="@dimen/icon_medium"
+                    android:background="@drawable/ic_minus"/>
+                <TextView
+                    android:id="@+id/gift_quantity"
+                    android:layout_width="@dimen/icon_small"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal"
+                    android:textSize="@dimen/font_big"
+                    android:text="1" />
+                <Button
+                    android:id="@+id/plus_button"
+                    android:layout_width="@dimen/icon_medium"
+                    android:layout_height="@dimen/icon_medium"
+                    android:background="@drawable/ic_plus"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/element_spacing_small"
+                android:fontFamily="@font/josefin_sans_bold"
+                android:textSize="@dimen/font_medium"
+                android:text="@string/shop_label"/>
+
+            <TextView
+                android:id="@+id/gift_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_slab"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/element_spacing_small"
+                android:fontFamily="@font/josefin_sans_bold"
+                android:textSize="@dimen/font_medium"
+                android:text="@string/description_label"/>
+
+            <TextView
+                android:id="@+id/gift_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_slab"
+                android:minLines="1"
+                android:text="No Description" />
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/add_to_wishlist_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:translationY="-25dp"
+            android:layout_marginHorizontal="@dimen/element_spacing_big"
+            android:textAllCaps="false"
+            android:text="@string/add_to_wishlist"
+            android:background="@drawable/ripple_button_long"
+            />
+    </LinearLayout>
+</ScrollView>

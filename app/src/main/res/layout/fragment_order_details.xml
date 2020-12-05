@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderDetails">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/default_full_screen_padding"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/title_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="@dimen/icon_medium"
+                android:layout_height="@dimen/icon_medium"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/ripple_back_button"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_title"
+                android:fontFamily="@font/abril_fatface"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:layout_centerInParent="true"
+                android:text="@string/order_details_title"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/element_spacing_small"
+            android:fontFamily="@font/abril_fatface"
+            android:textSize="@dimen/font_medium"
+            android:text="@string/items_label"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/order_items_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/element_spacing_medium"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/element_spacing_medium"
+            android:fontFamily="@font/abril_fatface"
+            android:textSize="@dimen/font_medium"
+            android:text="@string/delivery_status_label"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/icon_order"
+                android:layout_width="@dimen/icon_big"
+                android:layout_height="@dimen/icon_big"
+                android:layout_marginRight="@dimen/element_spacing_big"
+                android:layout_marginEnd="@dimen/element_spacing_big"
+                android:padding="@dimen/element_spacing_small"
+                android:src="@drawable/ic_order_fill_orders"
+                android:backgroundTint="@color/colorPrimarySuperLight"
+                android:background="@drawable/rounded_rect"/>
+
+            <ImageView
+                android:id="@+id/dots_trolley"
+                android:layout_width="@dimen/icon_big"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icon_order"
+                android:src="@drawable/ic_three_dots_ver"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/icon_trolley"
+                android:layout_width="@dimen/icon_big"
+                android:layout_height="@dimen/icon_big"
+                android:layout_marginRight="@dimen/element_spacing_big"
+                android:layout_marginEnd="@dimen/element_spacing_big"
+                android:layout_below="@+id/dots_trolley"
+                android:padding="@dimen/element_spacing_small"
+                android:src="@drawable/ic_trolley"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:background="@drawable/rounded_rect"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/dots_truck"
+                android:layout_width="@dimen/icon_big"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icon_trolley"
+                android:src="@drawable/ic_three_dots_ver"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/icon_truck"
+                android:layout_width="@dimen/icon_big"
+                android:layout_height="@dimen/icon_big"
+                android:layout_marginRight="@dimen/element_spacing_big"
+                android:layout_marginEnd="@dimen/element_spacing_big"
+                android:layout_below="@+id/dots_truck"
+                android:padding="@dimen/element_spacing_small"
+                android:src="@drawable/ic_truck"
+                android:backgroundTint="@color/baby_blue"
+                android:background="@drawable/rounded_rect"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/dots_gift"
+                android:layout_width="@dimen/icon_big"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icon_truck"
+                android:src="@drawable/ic_three_dots_ver"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/icon_gift"
+                android:layout_width="@dimen/icon_big"
+                android:layout_height="@dimen/icon_big"
+                android:layout_marginRight="@dimen/element_spacing_big"
+                android:layout_marginEnd="@dimen/element_spacing_big"
+                android:layout_below="@+id/dots_gift"
+                android:padding="@dimen/element_spacing_small"
+                android:src="@drawable/ic_gift3"
+                android:backgroundTint="@color/colorPrimary"
+                android:background="@drawable/rounded_rect"
+                android:visibility="gone"/>
+
+    <!--        Order Received-->
+            <LinearLayout
+                android:id="@+id/order_received_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/icon_big"
+                android:layout_toRightOf="@+id/icon_order"
+                android:layout_marginStart="@dimen/element_spacing_big"
+                android:layout_marginLeft="@dimen/element_spacing_big"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abril_fatface"
+                    android:textSize="@dimen/font_medium"
+                    android:text="@string/order_received_label"/>
+                <TextView
+                    android:id="@+id/order_received_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bree_serif"
+                    android:textSize="@dimen/font_small"
+                    android:text="25-9-2020"/>
+            </LinearLayout>
+
+    <!--        Order Prepared-->
+            <LinearLayout
+                android:id="@+id/order_preparing_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/icon_big"
+                android:layout_toRightOf="@+id/icon_trolley"
+                android:layout_below="@+id/order_received_layout"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="@dimen/element_spacing_big"
+                android:layout_marginLeft="@dimen/element_spacing_big"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abril_fatface"
+                    android:textSize="@dimen/font_medium"
+                    android:text="@string/order_preparing_label"/>
+                <TextView
+                    android:id="@+id/order_eta_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bree_serif"
+                    android:textSize="@dimen/font_small"
+                    android:text="25-9-2020"/>
+            </LinearLayout>
+
+    <!--        Order Delivering-->
+            <LinearLayout
+                android:id="@+id/order_delivering_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/icon_big"
+                android:layout_toRightOf="@+id/icon_truck"
+                android:layout_below="@+id/order_preparing_layout"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="@dimen/element_spacing_big"
+                android:layout_marginLeft="@dimen/element_spacing_big"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abril_fatface"
+                    android:textSize="@dimen/font_medium"
+                    android:text="@string/delivering_label"/>
+                <TextView
+                    android:id="@+id/order_delivering_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bree_serif"
+                    android:textSize="@dimen/font_small"
+                    android:text="To Hobi"/>
+                <TextView
+                    android:id="@+id/order_delivering_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bree_serif"
+                    android:textSize="@dimen/font_small"
+                    android:text="25-9-2020"/>
+            </LinearLayout>
+
+    <!--        Gift Received-->
+            <LinearLayout
+                android:id="@+id/gift_received_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/icon_big"
+                android:layout_toRightOf="@+id/icon_gift"
+                android:layout_below="@+id/order_delivering_layout"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="@dimen/element_spacing_big"
+                android:layout_marginLeft="@dimen/element_spacing_big"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abril_fatface"
+                    android:textSize="@dimen/font_medium"
+                    android:text="@string/gift_received_label"/>
+                <TextView
+                    android:id="@+id/gift_received_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bree_serif"
+                    android:textSize="@dimen/font_small"
+                    android:text="25-9-2020"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

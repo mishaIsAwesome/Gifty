@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //Fonts
+    <dimen name="font_small">12sp</dimen>
+    <dimen name="font_medium">15sp</dimen>
+    <dimen name="font_big">20sp</dimen>
+    <dimen name="font_title">30sp</dimen>
+    <dimen name="app_title">50sp</dimen>
+
+    //Layout Measurements
+    <dimen name="default_full_screen_padding">15dp</dimen>
+    <dimen name="big_full_screen_padding">30dp</dimen>
+    <dimen name="large_container_padding">10dp</dimen>
+    <dimen name="element_spacing_super_small">5dp</dimen>
+    <dimen name="element_spacing_small">10dp</dimen>
+    <dimen name="element_spacing_medium">20dp</dimen>
+    <dimen name="element_spacing_big">30dp</dimen>
+    <dimen name="element_spacing_large">100dp</dimen>
+    <dimen name="rounded_edge_small">10dp</dimen>
+    <dimen name="rounded_edge_medium">15dp</dimen>
+    <dimen name="rounded_edge_big">30dp</dimen>
+    <dimen name="square_container_size_medium">100dp</dimen>
+    <dimen name="square_container_size_large">100dp</dimen>
+
+
+    //Icons
+    <dimen name="icon_super_small">20dp</dimen>
+    <dimen name="icon_small">25dp</dimen>
+    <dimen name="icon_medium">35dp</dimen>
+    <dimen name="icon_big">50dp</dimen>
+    <dimen name="lottie_big">220dp</dimen>
+</resources>

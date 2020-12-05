@@ -1,0 +1,144 @@
+<resources>
+    <string name="app_name">Gifty</string>
+
+    //Auth
+    <string name="register_title">Register</string>
+    <string name="email_label">Email</string>
+    <string name="password_label">Password</string>
+    <string name="forgot_password_text">Forgot password?</string>
+    <string name="sign_in_button">Sign In</string>
+    <string name="sign_up_button">Sign Up</string>
+    <string name="dont_have_account_text">Don\'t have an account yet?</string>
+    <string name="sign_up_here_text">Sign up</string>
+    <string name="name_label">Name</string>
+    <string name="retype_password_label">Re-type Password</string>
+    <string name="already_have_account_text">Already have an account?</string>
+    <string name="sign_in_here_text"><b>Sign in</b></string>
+    <string name="login_error">Incorrect email or password</string>
+
+    //Facebook
+    <string name="facebook_app_id">719013285409003</string>
+    
+    //Home
+    <string name="home_welcome_text">Welcome back,</string>
+    <string name="home_category_popular">Popular</string>
+    <string name="home_category_latest">Latest</string>
+    <string name="home_category_stationery">Stationery</string>
+    <string name="home_category_food">Food</string>
+    <string name="phItemTitle">Unavailable</string>
+    <string name="phItemPrice">RM 0.00</string>
+
+    //Browse
+    <string name="browse_title">Browse</string>
+    <string name="add_to_wishlist">Add To A Wishlist</string>
+    <string name="add_to_label">Add to</string>
+    <string name="done_button_label">Done</string>
+    <string name="description_label">Description</string>
+    <string name="shop_label">Shop</string>
+
+    //Categories
+    <string name="flowers_title">Flowers</string>
+
+    //Wishlist
+    <string name="wishlists_title">Wishlists</string>
+    <string name="upcoming_label">Upcoming</string>
+    <string name="add_wishlist_title">Add Wishlist</string>
+    <string name="edit_wishlist_title">Edit Wishlist</string>
+    <string name="who_label">Who</string>
+    <string name="occasion_label">What\'s the occasion?</string>
+    <string name="when_label">When</string>
+    <string name="yearly_label">Yearly</string>
+    <string name="once_label">One-time Event</string>
+    <string name="address_label">Address</string>
+    <string name="address_line_label">Address Line</string>
+    <string name="state_label">State</string>
+    <string name="city_label">City</string>
+    <string name="postal_code_label">Postal Code</string>
+    <string name="address_info_text">This is where we\'ll deliver to gifts!</string>
+    <string name="notes_label">Notes</string>
+    <string name="notes_placeholder">You can write what they like here for reference!</string>
+    <string name="priority_label">Put at top of the list</string>
+    <string name="add_button_label">Add</string>
+    <string name="save_button_label">Save</string>
+    <string name="empty_wishlists_message">You have no wishlists! Add some now! >.\u003C</string>
+
+    <string name="wishlist_title">Wishlist</string>
+
+    //Wishlist
+    <string name="items_label">Items</string>
+    <string name="checkout_button_label">Checkout</string>
+    <string name="empty_wishlist_message">This wishlist is empty! Add some items now >.\u003C</string>
+    <string name="continue_text">Continue</string>
+    <string name="wishlist_deleted_message">Wishlist deleted</string>
+
+    //Cart
+    <string name="cart_title">My Cart</string>
+    <string name="subtotal_label">Subtotal</string>
+    <string name="shipping_fees_label">Shipping Fees</string>
+    <string name="total_label">Total</string>
+    <string name="pay_now_button_label">Pay Now</string>
+
+    //Payment
+    <string name="payment_title">Payment</string>
+    <string name="delivery_address_label">Delivery Address</string>
+    <string name="payment_method_label">Payment Method</string>
+    <string name="online_banking_label">Online Banking</string>
+    <string name="credit_debit_card_label">Credit/Debit Card</string>
+    <string name="others_label">Others</string>
+    <string name="proceed_button_label">Proceed</string>
+    <string name="gift_ordered_message">Gift Ordered!</string>
+    
+    //Customise
+    <string name="customise_title">Customise</string>
+    <string name="choose_your_wrapping_label">Choose your Wrapping</string>
+    <string name="wrapping_info_text">If you are ordering flowers, the theme of the wrapping will be as chosen. Leave it to us!</string>
+    <string name="solid_colours_label">Solid Colours</string>
+    <string name="patterns_label">Patterns</string>
+    <string name="upload_pattern_label">Upload your own pattern</string>
+    <string name="upload_pattern_into_text">Note: Please be sure to upload a high quality picture/pattern. If you are concern about the 
+outcome, feel free to send us an email with your order number!</string>
+    <string name="write_a_message_label">Write a Message</string>
+    <string name="write_a_message_placeholder">Your message goes here</string>
+    
+    //Cards
+    <string name="card_form_title">Add Card</string>
+    <string name="card_name_label">Full Name (On card)</string>
+    <string name="card_number_label">Card Number</string>
+    <string name="card_expiry_label">Expiry Date</string>
+    <string name="card_cvv_label">CVV</string>
+
+    <string name="cards_title">My Cards</string>
+    <string name="empty_cards_message">You have no cards!</string>
+    <string name="card_deleted_message">Card deleted</string>
+
+    //Orders
+    <string name="orders_title">Orders</string>
+    <string name="empty_orders_message">There are no orders yet!</string>
+    <string name="order_details_title">Order Details</string>
+    <string name="delivery_status_label">Delivery Status</string>
+    <string name="order_received_label">Order Received</string>
+    <string name="order_preparing_label">Order is being Prepared</string>
+    <string name="sent_out_by_label">Will be sent out by: </string>
+    <string name="delivering_label">Delivering</string>
+    <string name="gift_received_label">Gift Received</string>
+
+    //Profile
+    <string name="profile_title">Profile</string>
+    <string name="notifications_enabled_label">Notifications On</string>
+    <string name="notifications_disabled_label">Notifications Off</string>
+    <string name="favourites_label">Favourites</string>
+    <string name="logout_label">Logout</string>
+    <string name="profile_edit_title">Edit Profile</string>
+
+    //Others
+    <string name="more_text">More</string>
+    
+    <string-array name="occasions">
+        <item name="birthday_label">Birthday</item>
+        <item name="anniversary_label">Anniversary</item>
+        <item name="graduation_label">Graduation</item>
+        <item name="congratulatory_label">Congratulations!</item>
+    </string-array>
+
+
+</resources>

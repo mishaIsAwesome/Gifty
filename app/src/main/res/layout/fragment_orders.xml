@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Orders">
+
+    <TextView
+        android:id="@+id/orders_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_full_screen_padding"
+        android:textSize="@dimen/font_title"
+        android:fontFamily="@font/abril_fatface"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:text="@string/orders_title"
+        />
+
+    <ListView
+        android:id="@+id/orders_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/orders_title"
+        android:layout_marginHorizontal="@dimen/default_full_screen_padding"
+        android:divider="@null"
+        android:dividerHeight="@dimen/element_spacing_small"/>
+
+    <TextView
+        android:id="@+id/list_empty_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="@dimen/font_medium"
+        android:fontFamily="@font/josefin_slab"
+        android:visibility="invisible"
+        android:text="@string/empty_orders_message"/>
+
+</RelativeLayout>
