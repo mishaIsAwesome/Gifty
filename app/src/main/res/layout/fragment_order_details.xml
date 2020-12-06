@@ -157,8 +157,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/bree_serif"
-                    android:textSize="@dimen/font_small"
-                    android:text="25-9-2020"/>
+                    android:textSize="@dimen/font_small"/>
             </LinearLayout>
 
     <!--        Order Prepared-->

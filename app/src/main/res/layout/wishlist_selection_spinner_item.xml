@@ -19,8 +19,7 @@
         android:layout_centerVertical="true"
         android:layout_toRightOf="@+id/friend_image"
         android:fontFamily="@font/abril_fatface"
-        android:textSize="@dimen/font_medium"
-        android:text="Femi's Birthday"/>
+        android:textSize="@dimen/font_medium"/>
 
     <TextView
         android:id="@+id/cart_items_count_text"

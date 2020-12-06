@@ -1,14 +1,9 @@
 package com.inti.gifty;
 
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatImageButton;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -30,7 +25,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 
 public class Home extends Fragment {

@@ -28,22 +28,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/josefin_sans_bold"
-            android:textSize="@dimen/font_medium"
-            android:text="Femi's Birthday"/>
+            android:textSize="@dimen/font_medium"/>
         <TextView
             android:id="@+id/date_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/josefin_sans"
-            android:textSize="@dimen/font_small"
-            android:text="25/6/2020"/>
+            android:textSize="@dimen/font_small"/>
         <TextView
             android:id="@+id/days_away_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/josefin_sans"
-            android:textSize="@dimen/font_small"
-            android:text="0 days away"/>
+            android:textSize="@dimen/font_small"/>
     </LinearLayout>
 
     <LinearLayout

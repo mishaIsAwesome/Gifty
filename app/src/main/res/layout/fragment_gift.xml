@@ -42,7 +42,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/flowers_white"
                     android:translationY="50dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -67,7 +66,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="9"
                     android:fontFamily="@font/josefin_sans_bold"
-                    android:text="Moleskin Idea Notebook"
                     android:textSize="@dimen/font_big" />
                 <Button
                     android:id="@+id/heart_button"
@@ -81,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/josefin_sans_thin"
                 android:textSize="@dimen/font_medium"
-                android:text="RM 58.00"/>
+                android:text="RM 0.00"/>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -101,7 +99,7 @@
                     android:textAlignment="center"
                     android:gravity="center_horizontal"
                     android:textSize="@dimen/font_big"
-                    android:text="1" />
+                    android:text="0" />
                 <Button
                     android:id="@+id/plus_button"
                     android:layout_width="@dimen/icon_medium"

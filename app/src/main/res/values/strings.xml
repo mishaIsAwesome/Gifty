@@ -15,10 +15,13 @@
     <string name="already_have_account_text">Already have an account?</string>
     <string name="sign_in_here_text"><b>Sign in</b></string>
     <string name="login_error">Incorrect email or password</string>
+    <string name="forgot_password_title">Recover Password</string>
+    <string name="recover_password_text">Enter your registered email below and we\'ll send an email for you to change your password.</string>
+    <string name="send_email_button">Send</string>
 
     //Facebook
     <string name="facebook_app_id">719013285409003</string>
-    
+
     //Home
     <string name="home_welcome_text">Welcome back,</string>
     <string name="home_category_popular">Popular</string>
@@ -87,7 +90,7 @@
     <string name="others_label">Others</string>
     <string name="proceed_button_label">Proceed</string>
     <string name="gift_ordered_message">Gift Ordered!</string>
-    
+
     //Customise
     <string name="customise_title">Customise</string>
     <string name="choose_your_wrapping_label">Choose your Wrapping</string>
@@ -99,7 +102,7 @@
 outcome, feel free to send us an email with your order number!</string>
     <string name="write_a_message_label">Write a Message</string>
     <string name="write_a_message_placeholder">Your message goes here</string>
-    
+
     //Cards
     <string name="card_form_title">Add Card</string>
     <string name="card_name_label">Full Name (On card)</string>
@@ -132,7 +135,7 @@ outcome, feel free to send us an email with your order number!</string>
 
     //Others
     <string name="more_text">More</string>
-    
+
     <string-array name="occasions">
         <item name="birthday_label">Birthday</item>
         <item name="anniversary_label">Anniversary</item>

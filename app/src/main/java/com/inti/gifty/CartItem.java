@@ -5,6 +5,10 @@ class CartItem extends Item{
     private int quantity;
     private double amount;
 
+    public CartItem(){
+        super();
+    }
+
     public CartItem(String id, String name, String shop, String image, double price, String desc, double rating, int quantity, double amount) {
         super(id, name, shop, image, price, desc, rating);
         this.quantity = quantity;

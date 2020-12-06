@@ -11,6 +11,8 @@ class Item implements Serializable {
     private String desc;
     private double rating;
 
+    public Item() {}
+
     public Item(String id, String name, String shop, String image, double price, String desc, double rating) {
         this.id = id;
         this.name = name;

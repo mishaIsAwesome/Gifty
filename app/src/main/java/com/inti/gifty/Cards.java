@@ -60,14 +60,7 @@ public class Cards extends Fragment {
                 cardsList.clear();
 
                 for (DataSnapshot card : snapshot.getChildren()){
-                    String id = card.getKey();
-                    String name = card.child("name").getValue().toString();
-                    String number = card.child("number").getValue().toString();
-                    String service = card.child("service").getValue().toString();
-                    String expiryDate = card.child("expiryDate").getValue().toString();
-                    String cvv = card.child("cvv").getValue().toString();
-
-                    Card newCard = new Card(id, name, number, service, expiryDate, cvv);
+                    Card newCard = card.getValue(Card.class);
                     cardsList.add(newCard);
                 }
                 fillList(cardsList);

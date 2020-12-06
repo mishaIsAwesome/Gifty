@@ -52,44 +52,7 @@ public class Orders extends Fragment {
                 ordersList.clear();
 
                 for (DataSnapshot order : snapshot.getChildren()){
-                    String orderID = order.getKey();
-                    String dateOrdered = order.child("dateOrdered").getValue().toString();
-                    String dateETA = order.child("dateETA").getValue().toString();
-                    String dateSent = order.child("dateSent").getValue().toString();
-                    String dateReceived = order.child("dateReceived").getValue().toString();
-                    double totalAmount = order.child("totalAmount").getValue(Integer.class);
-                    String status = order.child("status").getValue().toString();
-
-                    String id = order.child("friend").child("id").getValue().toString();
-                    String name = order.child("friend").child("name").getValue().toString();
-                    String image = order.child("friend").child("image").getValue().toString();
-                    String occasion = order.child("friend").child("occasion").getValue().toString();
-                    String date = order.child("friend").child("date").getValue().toString();
-                    String occurrence = order.child("friend").child("occurrence").getValue().toString();
-                    int reminderId = order.child("friend").child("reminderId").getValue(Integer.class);
-                    String addressLine = order.child("friend").child("addressLine").getValue().toString();
-                    String state = order.child("friend").child("state").getValue().toString();
-                    String city = order.child("friend").child("city").getValue().toString();
-                    String postalCode = order.child("friend").child("postalCode").getValue().toString();
-                    String notes = order.child("friend").child("notes").getValue().toString();
-                    Boolean priority = Boolean.parseBoolean(order.child("friend").child("priority").getValue().toString());
-
-                    ArrayList<CartItem> wishlist = new ArrayList<>();
-                    for (DataSnapshot item : order.child("friend").child("wishlist").getChildren()){
-                        String itemId = item.getKey();
-                        String itemName = item.child("name").getValue().toString();
-                        String itemShop = item.child("shop").getValue().toString();
-                        double itemPrice = item.child("price").getValue(Integer.class);
-                        String itemImage = item.child("image").getValue().toString();
-                        String itemDesc = item.child("desc").getValue().toString();
-                        double itemRating = item.child("rating").getValue(Integer.class);
-                        int itemQuantity = item.child("quantity").getValue(Integer.class);
-                        double itemAmount = item.child("amount").getValue(Integer.class);
-                        CartItem newItem = new CartItem(itemId, itemName, itemShop, itemImage, itemPrice, itemDesc, itemRating, itemQuantity, itemAmount);
-                        wishlist.add(newItem);
-                    }
-                    Friend newFriend = new Friend(id, name, image, occasion, date, occurrence, reminderId, addressLine, state, city, postalCode, notes, priority, wishlist);
-                    Order newOrder = new Order(orderID, newFriend, dateOrdered, dateETA, dateSent, dateReceived, totalAmount, status);
+                    Order newOrder = order.getValue(Order.class);
                     ordersList.add(newOrder);
                 }
                 fillList(ordersList);

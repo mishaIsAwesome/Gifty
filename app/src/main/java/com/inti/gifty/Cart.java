@@ -12,22 +12,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -49,7 +45,7 @@ public class Cart extends Fragment {
     Button payNowButton;
     ImageButton backButton;
 
-    ArrayList<Friend> friendsList = new ArrayList<Friend>();
+    ArrayList<Friend> friendsList = new ArrayList<>();
     String selectedFriendID;
     double subTotalPrice = 0;
     double totalPrice = 0;
@@ -76,6 +72,9 @@ public class Cart extends Fragment {
         dbUsers.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (!snapshot.exists()){
+                    return;
+                };
                 friendsList.clear();
 
                 for (DataSnapshot friend : snapshot.getChildren()) {
@@ -169,6 +168,10 @@ public class Cart extends Fragment {
             checkoutItemsListView.setAdapter(null);
             final cartItemListViewAdapter adapter = new cartItemListViewAdapter(getActivity(), friend.getWishlist(), friend.getId());
             checkoutItemsListView.setAdapter(adapter);
+            if (friend.getWishlist().isEmpty()){
+                payNowButton.setEnabled(false);
+            } else
+                payNowButton.setEnabled(true);
         }
     }
 

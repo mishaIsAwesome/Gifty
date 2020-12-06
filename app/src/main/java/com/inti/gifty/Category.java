@@ -22,7 +22,6 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-
 public class Category extends Fragment {
 
     DatabaseReference dbRef;

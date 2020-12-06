@@ -26,8 +26,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginVertical="@dimen/element_spacing_small"
             android:fontFamily="@font/abril_fatface"
-            android:textSize="@dimen/font_big"
-            android:text="Jung Hoseok"/>
+            android:textSize="@dimen/font_big"/>
 
         <TextView
         android:id="@+id/profile_email"

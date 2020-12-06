@@ -52,23 +52,23 @@ public class itemListViewAdapter extends ArrayAdapter<ArrayList> {
 
         View v = convertView;
         if (v == null) {
-                LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                v = vi.inflate(R.layout.simple_two_item_list, null);
+            LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            v = vi.inflate(R.layout.simple_two_item_list, null);
 
-                holder = new ViewHolder();
+            holder = new ViewHolder();
 
-                holder.itemTitle1 = v.findViewById(R.id.item_1_title);
-                holder.itemPrice1 = v.findViewById(R.id.item_1_price);
-                holder.itemImage1 = v.findViewById(R.id.item_1_image);
-                holder.ratingBar1 = v.findViewById(R.id.ratingBar_1);
-                holder.itemLayout1 = v.findViewById(R.id.item_1_layout);
+            holder.itemTitle1 = v.findViewById(R.id.item_1_title);
+            holder.itemPrice1 = v.findViewById(R.id.item_1_price);
+            holder.itemImage1 = v.findViewById(R.id.item_1_image);
+            holder.ratingBar1 = v.findViewById(R.id.ratingBar_1);
+            holder.itemLayout1 = v.findViewById(R.id.item_1_layout);
 
-                holder.itemTitle2 = v.findViewById(R.id.item_2_title);
-                holder.itemPrice2 = v.findViewById(R.id.item_2_price);
-                holder.itemImage2 = v.findViewById(R.id.item_2_image);
-                holder.ratingBar2 = v.findViewById(R.id.ratingBar_2);
-                holder.itemLayout2 = v.findViewById(R.id.item_2_layout);
-                v.setTag(holder);
+            holder.itemTitle2 = v.findViewById(R.id.item_2_title);
+            holder.itemPrice2 = v.findViewById(R.id.item_2_price);
+            holder.itemImage2 = v.findViewById(R.id.item_2_image);
+            holder.ratingBar2 = v.findViewById(R.id.ratingBar_2);
+            holder.itemLayout2 = v.findViewById(R.id.item_2_layout);
+            v.setTag(holder);
         } else{
             holder = (ViewHolder) v.getTag();
         }

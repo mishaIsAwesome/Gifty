@@ -48,7 +48,6 @@
                 android:layout_marginTop="@dimen/element_spacing_super_small"
                 android:textAlignment="center"
                 android:fontFamily="@font/abril_fatface"
-                android:text="Brown Bag"
                 android:lines="2"
                 android:ellipsize="end"
                 android:gravity="center_horizontal" />
@@ -58,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/josefin_sans"
-                android:text="RM 59.00" />
+                android:text="RM 0.00" />
 
             <com.iarcuschin.simpleratingbar.SimpleRatingBar
                 android:id="@+id/ratingBar_1"
@@ -110,7 +109,6 @@
                 android:layout_marginTop="@dimen/element_spacing_super_small"
                 android:textAlignment="center"
                 android:fontFamily="@font/abril_fatface"
-                android:text="Brown Bag"
                 android:lines="2"
                 android:ellipsize="end"
                 android:gravity="center_horizontal" />
@@ -120,7 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/josefin_sans"
-                android:text="RM 59.00" />
+                android:text="RM 0.00" />
             <com.iarcuschin.simpleratingbar.SimpleRatingBar
                 android:id="@+id/ratingBar_2"
                 android:layout_width="wrap_content"

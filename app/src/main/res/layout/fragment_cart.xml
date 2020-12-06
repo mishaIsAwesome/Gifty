@@ -94,7 +94,7 @@
                 android:layout_alignParentRight="true"
                 android:fontFamily="@font/josefin_sans"
                 android:textSize="@dimen/font_medium"
-                android:text="RM 50.00"/>
+                android:text="RM 0.00"/>
         </RelativeLayout>
 
 <!--    Shipping Fee-->
@@ -117,7 +117,7 @@
                 android:layout_alignParentRight="true"
                 android:fontFamily="@font/josefin_sans"
                 android:textSize="@dimen/font_medium"
-                android:text="RM 4.00"/>
+                android:text="RM 0.00"/>
         </RelativeLayout>
 
 <!--    Total-->
@@ -140,7 +140,7 @@
                 android:layout_alignParentRight="true"
                 android:fontFamily="@font/josefin_sans_bold"
                 android:textSize="@dimen/font_medium"
-                android:text="RM 54.00"/>
+                android:text="RM 0.00"/>
         </RelativeLayout>
 
         <Button
@@ -151,6 +151,7 @@
             android:layout_marginBottom="@dimen/element_spacing_super_small"
             android:textAllCaps="false"
             android:text="@string/pay_now_button_label"
+            android:enabled="false"
             android:background="@drawable/ripple_button_long_light" />
     </LinearLayout>
 

@@ -3,13 +3,11 @@ package com.inti.gifty;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -23,8 +21,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.theartofdev.edmodo.cropper.CropImage;
-import com.theartofdev.edmodo.cropper.CropImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -32,7 +28,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import static android.app.Activity.RESULT_OK;
 
 public class Profile extends Fragment {
 
@@ -58,10 +53,7 @@ public class Profile extends Fragment {
         dbUsers.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String name = snapshot.child("name").getValue().toString();
-                String email = snapshot.child("email").getValue().toString();
-                String image = snapshot.child("image").getValue().toString();
-                User currentUser = new User(name, email, image);
+                User currentUser = snapshot.getValue(User.class);
                 user = currentUser;
                 setInfo(currentUser);
             }

@@ -13,6 +13,8 @@ class Order implements Serializable {
     private double totalAmount;
     private String status;
 
+    public Order(){}
+
     public Order(String id, Friend friend, String dateOrdered, String dateETA, String dateSent, String dateReceived, double totalAmount, String status) {
         this.id = id;
         this.friend = friend;

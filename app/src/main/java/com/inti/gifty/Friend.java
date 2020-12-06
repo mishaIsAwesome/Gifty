@@ -20,6 +20,8 @@ class Friend implements Serializable {
     private Boolean priority;
     private ArrayList<CartItem> wishlist;
 
+    public Friend(){}
+
     public Friend(String id, String name, String image, String occasion, String date, String occurrence, int reminderId, String addressLine, String state, String city, String postalCode, String notes, Boolean priority, ArrayList<CartItem> wishlist) {
         this.id = id;
         this.name = name;

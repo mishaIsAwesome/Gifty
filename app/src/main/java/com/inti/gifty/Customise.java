@@ -2,7 +2,6 @@ package com.inti.gifty;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.icu.text.SymbolTable;
 import android.net.Uri;
 import android.os.Bundle;
 

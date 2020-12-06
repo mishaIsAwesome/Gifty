@@ -8,6 +8,8 @@ class Card {
     private String expiryDate;
     private String cvv;
 
+    public Card(){};
+
     public Card(String id, String name, String number, String service, String expiryDate, String cvv) {
         this.id = id;
         this.name = name;

@@ -16,8 +16,7 @@
         android:textAlignment="center"
         android:gravity="center"
         android:fontFamily="@font/abril_fatface"
-        android:textSize="@dimen/font_big"
-        android:text="Femi's Birthday"/>
+        android:textSize="@dimen/font_big"/>
 
     <RelativeLayout
         android:layout_width="match_parent"

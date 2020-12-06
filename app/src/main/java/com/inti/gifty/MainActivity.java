@@ -4,19 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.NavigationUI;
 
 import android.os.Bundle;
-import android.transition.TransitionManager;
-import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 

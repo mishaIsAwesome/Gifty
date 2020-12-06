@@ -6,13 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".GiftOrdered">
 
-<!--    <ImageView-->
-<!--        android:id="@+id/gift_image"-->
-<!--        android:layout_width="@dimen/icon_big"-->
-<!--        android:layout_height="@dimen/icon_big"-->
-<!--        android:layout_centerInParent="true"-->
-<!--        android:src="@drawable/ic_gift2"/>-->
-
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/gift_image"
         android:layout_width="@dimen/lottie_big"
@@ -32,21 +25,6 @@
         android:fontFamily="@font/josefin_sans_bold"
         android:textSize="@dimen/font_big"
         android:text="@string/gift_ordered_message"/>
-
-<!--    <ImageView-->
-<!--        android:layout_width="@dimen/icon_big"-->
-<!--        android:layout_height="@dimen/icon_big"-->
-<!--        android:layout_above="@+id/gift_image"-->
-<!--        android:layout_marginLeft="130dp"-->
-<!--        android:src="@drawable/ic_balloons"/>-->
-
-<!--    <ImageView-->
-<!--        android:layout_width="@dimen/icon_big"-->
-<!--        android:layout_height="@dimen/icon_big"-->
-<!--        android:layout_above="@+id/gift_image"-->
-<!--        android:layout_marginBottom="20dp"-->
-<!--        android:layout_marginLeft="210dp"-->
-<!--        android:src="@drawable/ic_balloons"/>-->
 
     <Button
         android:id="@+id/continue_button"

@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,13 +13,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.AccessToken;
-import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
-import com.facebook.GraphRequest;
-import com.facebook.GraphResponse;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -41,10 +37,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.database.util.GAuthToken;
 
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.Arrays;
 
@@ -56,7 +49,7 @@ public class Login extends AppCompatActivity {
     private GoogleSignInClient googleSignInClient;
     private ValueEventListener dbListener;
 
-    TextView registerHereText, errorMessageText;
+    TextView registerHereText, forgotPasswordText, errorMessageText;
     EditText emailTextField, passwordTextField;
     Button loginButton, facebookLoginButton, gmailLoginButton;
     ProgressBar loadingBar;
@@ -74,6 +67,7 @@ public class Login extends AppCompatActivity {
         emailTextField = findViewById(R.id.email_edit_text);
         passwordTextField = findViewById(R.id.password_edit_text);
         registerHereText = findViewById(R.id.register_text_button);
+        forgotPasswordText = findViewById(R.id.forgot_password_text);
         errorMessageText = findViewById(R.id.login_error_text);
         loginButton = findViewById(R.id.login_button);
         facebookLoginButton = findViewById(R.id.facebook_login_button);
@@ -103,6 +97,14 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Login.this, Register.class));
+                finish();
+            }
+        });
+
+        forgotPasswordText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Login.this, ForgotPassword.class));
                 finish();
             }
         });
